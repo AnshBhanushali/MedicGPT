@@ -10,7 +10,7 @@ app = Flask(__name__)
 openai.api_key = os.getenv('API_KEY')
 
 
-@app.route("/", methods = ["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def chatbot():
     if request.method == "POST":
         user_input = request.form.get("user_input")
@@ -22,8 +22,8 @@ def chatbot():
             ]    
         )
 
-        chat_reponse = chat_history["choices"][0]["messages"]["content"]
-        return render_template("index.html, user_input=user_input", chat_response=chat_response)
+        chat_response = chat_history["choices"][0]["message"]["content"]
+        return render_template("index.html", user_input=user_input, chat_response=chat_response)
     
     return render_template("index.html")
 
