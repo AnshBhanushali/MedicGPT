@@ -21,4 +21,11 @@ def chatbot():
                 {"role": "user", "content": user_input}
             ]    
         )
-        
+
+        chat_reponse = chat_history["choices"][0]["messages"]["content"]
+        return render_template("index.html, user_input=user_input", chat_response=chat_response)
+    
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
