@@ -1,4 +1,5 @@
 import React from 'react';
+import Chatbot from '../component/Chatbot';
 
 const Home = () => {
   return (

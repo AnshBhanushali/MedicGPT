@@ -4,7 +4,6 @@ import { Box, Typography, TextField, Button } from '@mui/material';
 const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission logic
   };
 
   return (
